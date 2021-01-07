@@ -20,14 +20,18 @@ window.onload = function() {
 function randomNumberMinMax(min, max){
    const r = Math.random()*(max-min) + min
    return Math.floor(r)
+   //return r;
 }
 
 function hints1(){
+   //document.getElementById("hints").innerHTML =randomNumber;
    hintsMin = randomNumberMinMax(randomNumber-2,randomNumber);
    hintsMax = randomNumberMinMax(randomNumber,randomNumber+2);
-
+   document.getElementById("hints").innerHTML = "[Hints:Number is bettween "+hintsMin+" and "+hintsMax+" ]";
 }
 function myFunction2() {  //next
+   
+
    document.getElementById("unknownNumber").innerHTML = "?";
    if(guessNumber==0){
          randomNumber=randomNumber+arr1[i];
@@ -37,6 +41,7 @@ function myFunction2() {  //next
       randomNumber=randomNumber+arr2[i];
          i=i+1;
    }
+   hints1()
    document.getElementById("point").innerHTML = randomNumber;
    
  }
