@@ -50,8 +50,9 @@ h1:hover{
     border: 2px solid white;
     border-radius: 4px;
     background-color: #d6d5d5;
-    font-size: 22px;
-    resize: none;
+    font-size: 25px;
+	resize: none;
+	text-align: center;
 
   }
 
@@ -69,13 +70,21 @@ h1:hover{
 
   #inputOutput{
 	display: block;
-    text-align: left;
     display: block;
     text-align: center;
     position: relative;
     left: 0;
-    top: 0;
+    top: 50px;
     font-size: 18px
+  }
+
+
+  #pointsLive{
+	font-size: 30px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	float:right;
+	bottom: 0%;
   }
 
  /*#result {
