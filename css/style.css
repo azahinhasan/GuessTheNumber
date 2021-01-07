@@ -1,0 +1,227 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+h1{
+    text-align: center;
+    color: rgb(10, 147, 156);
+   
+}
+h1:hover{
+	animation: wiggle 0.6s;
+}
+
+/*div.mainDev{
+	position: relative;
+	width: 400px;
+	height: 200px;
+	border: 3px solid red;
+  }
+
+
+  div.DevOutput {
+	position: absolute;
+	left: auto;
+	width: 100px;
+	height: 120px;
+	top:0px;
+	border: 3px solid blue;
+  } 
+  
+  div.DevInput {
+	position: absolute;
+	left: 150px;
+	width: 200px;
+	height: 120px;
+	border: 3px solid green;
+  } */
+
+
+
+
+
+
+
+
+#size, #speed {
+    width: 50%;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(10, 147, 156);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 18px;
+    resize: none;
+
+  }
+
+#sizeOption,#speedOption {
+    width: 100%;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(10, 147, 156);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 19px;
+    resize: none;
+
+  }
+
+  #form{
+	display: block;
+    text-align: left;
+    display: block;
+    text-align: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    font-size: 18px
+  }
+
+ /*#result {
+	top:0px;
+    width: 100%;
+    height: 200px;
+	padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-radius: 4px;
+    background-color: #167b8d;
+    font-size: 20px;
+    color: whitesmoke;
+    text-align: center;
+    resize: none;
+	font-weight: bold;
+  }
+
+
+  #result:hover{
+	background-color: #FFFFFF;
+	color: #167b8d;
+	border: 2px solid  #167b8d;
+  }*/
+
+
+
+
+  #ps{
+	text-align: center;
+    color: rgb(10, 147, 156);
+	animation-name: example;
+	font-size: 20px;
+	animation-duration: 60s;
+  }
+
+  @keyframes example {
+	0%   {color: rgb(86, 150, 158);}
+	25%  {color: rgb(10, 147, 156);}
+	50%  {color: rgb(167, 42, 199);}
+	100% {color: rgb(126, 128, 11);}
+	
+  }
+
+  #note{
+	display: block;
+    text-align: center;
+    display: block;
+    text-align: center;
+    position: relative;
+	top: 220px;
+	left: 0;
+	font-weight: bold;
+
+	 
+  }
+
+  #temp{
+	  color: white;
+  }
+
+  #input{
+	margin-left: auto; 
+	margin-right: auto;
+  }
+
+h1:before{
+	height: 55px;
+	width: 7px;
+	left:10px;
+	bottom: 5px;
+	border-radius: 7px;
+}
+h1:after{
+	height: 7px;
+	width: 7px;
+	border-radius: 50%;
+	bottom: 65px;
+	left:10px;
+}
+
+@keyframes wiggle{
+	25%{
+		transform: scale(0.8,1.3);
+	}
+	50%{
+		transform: scale(1.1,0.8);
+	}
+	75%{
+		transform: scale(0.7,1.2);
+	}
+}
+
+
+.button {
+	border-radius: 4px;
+	background-color: #167b8d;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 28px;
+	padding: 20px;
+	width: 530px;
+    height: 70px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+  }
+  
+  .button span {
+	  
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.3s;
+  }
+  
+  .button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.3s;
+  }
+  
+  .button:hover span {
+	padding-right: 25px;
+  }
+  
+  .button:hover{
+	background-color: #FFFFFF;
+	color: #167b8d;
+	border: 2px solid  #167b8d;
+  }
+  
+
+  .button:hover span:after {
+	  
+	opacity: 1;
+	right: 0;
+  }
