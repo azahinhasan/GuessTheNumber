@@ -4,42 +4,20 @@ body{
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+	overflow-x: hidden; 
+	background-color: black;
+	color: white;
 }
 
 h1{
     text-align: center;
-    color: rgb(10, 147, 156);
+    color: #d6d5d5;
    
 }
 h1:hover{
 	animation: wiggle 0.6s;
 }
 
-/*div.mainDev{
-	position: relative;
-	width: 400px;
-	height: 200px;
-	border: 3px solid red;
-  }
-
-
-  div.DevOutput {
-	position: absolute;
-	left: auto;
-	width: 100px;
-	height: 120px;
-	top:0px;
-	border: 3px solid blue;
-  } 
-  
-  div.DevInput {
-	position: absolute;
-	left: 150px;
-	width: 200px;
-	height: 120px;
-	border: 3px solid green;
-  } */
 
 
 
@@ -61,20 +39,35 @@ h1:hover{
 
   }
 
-#sizeOption,#speedOption {
-    width: 100%;
-    height: 50px;
+
+
+
+#yourNumber {
+    width: 10%;
+    height: 60px;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid rgb(10, 147, 156);
+    border: 2px solid white;
     border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 19px;
+    background-color: #d6d5d5;
+    font-size: 22px;
     resize: none;
 
   }
 
-  #form{
+#unknownNumber{
+	font-size: 30px;
+	background-color: #d6d5d5;
+	color: black;
+	border: 3px solid white;
+	width: 30px;
+	height: 60px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border-radius: 4px;
+  }
+
+  #inputOutput{
 	display: block;
     text-align: left;
     display: block;
@@ -140,14 +133,7 @@ h1:hover{
 	 
   }
 
-  #temp{
-	  color: white;
-  }
 
-  #input{
-	margin-left: auto; 
-	margin-right: auto;
-  }
 
 h1:before{
 	height: 55px;
@@ -179,13 +165,13 @@ h1:after{
 
 .button {
 	border-radius: 4px;
-	background-color: #167b8d;
+	background-color: #d6d5d5;
 	border: none;
-	color: #FFFFFF;
+	color: balck;
 	text-align: center;
 	font-size: 28px;
 	padding: 20px;
-	width: 530px;
+	width: 400px;
     height: 70px;
 	transition: all 0.5s;
 	cursor: pointer;
@@ -214,9 +200,9 @@ h1:after{
   }
   
   .button:hover{
-	background-color: #FFFFFF;
-	color: #167b8d;
-	border: 2px solid  #167b8d;
+	background-color: black;
+	color: #d6d5d5;
+	border: 2px solid  #d6d5d5;
   }
   
 

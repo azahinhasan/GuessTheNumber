@@ -3,8 +3,8 @@
 var guessNumber = 0;
 var randomNumber=0;
 var i=0;
-var arr1 = [5,8,10,13,15,19];
-var arr2 = [5,8,10,13,15,19];
+var arr1 = [0,5,8,10];
+var arr2 = [0,2,1,9];
 var points=0;
 var life = 10;
 var hintsMin = hintsMax = 0;
