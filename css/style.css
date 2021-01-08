@@ -7,6 +7,8 @@ body{
 	overflow-x: hidden; 
 	background-color: black;
 	color: white;
+	@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+	font-family: 'Pirata One', cursive;
 }
 
 h1{
@@ -21,27 +23,34 @@ h1:hover{
 
 
 
+#fontpageH{
+	text-align: center;
+	color: #d6d5d5;
+	position: relative;
+	bottom: -250px;
+	font-size: 52px;
+	
+}
+
+#fontpageH:hover{
+	animation: wiggle 0.6s;
+}
+
+#fontpageH2{
+	text-align: center;
+	color: #d6d5d5;
+	position: relative;
+	bottom: -250px;
+	font-size: 42px;
+	font-family: 'Pirata One', cursive;
+}
 
 
-
-
-
-#size, #speed {
-    width: 50%;
-    height: 50px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid rgb(10, 147, 156);
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 18px;
-    resize: none;
-
-  }
-
-
-
-
+#hints{
+	position: relative;
+	text-align: center;
+	left: 50px;
+}
 #yourNumber {
     width: 10%;
     height: 60px;
@@ -50,8 +59,7 @@ h1:hover{
     border: 2px solid white;
     border-radius: 4px;
     background-color: #d6d5d5;
-	font-size: 25
-	px;
+	font-size: 25px;
 	resize: none;
 	text-align: center;
 
@@ -161,11 +169,21 @@ h1:after{
 	transition: all 0.5s;
 	cursor: pointer;
 	margin: 5px;
+	font-family: 'Pirata One', cursive;
 	
   }
+
+  #buttonStart {
+	text-align: center;
+	position: relative;
+	bottom: -200px;
+	font-size: 35px;
+	width: 280px;
+    height: 80px;	
+  }
+
   
   .button span {
-	  
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
