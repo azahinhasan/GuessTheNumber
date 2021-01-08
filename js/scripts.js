@@ -31,7 +31,7 @@ function hints1(){
    //document.getElementById("hints").innerHTML =randomNumber;
    hintsMin = randomNumberMinMax(randomNumber-2,randomNumber);
    hintsMax = randomNumberMinMax(randomNumber,randomNumber+2);
-   document.getElementById("hints").innerHTML = "[Hints:Number is bettween "+hintsMin+" and "+hintsMax+" ]";
+   hints = "[Hints:Number is bettween "+hintsMin+" and "+hintsMax+" ]";
 }
 function myFunction2() {  //next
    
@@ -92,6 +92,22 @@ function myFunction2() {  //next
 
 
 
+ function gameManu(){
+   xhttp.open("GET", "index.html", true);
+   xhttp.send();
+ }
+
+
+ function processAjaxData(response, urlPath){
+   document.getElementById("content").innerHTML = response.html;
+   document.title = response.pageTitle;
+   window.history.pushState({"html":response.html,"pageTitle":response.pageTitle},"", urlPath);
+}
+
+function hintsButton(){
+   document.getElementById("hintsButton").style.display = "none";
+   document.getElementById("hints").innerHTML = hints;
+}
 
 /*function myFunction() {
     var size = document.getElementById("size").value;
