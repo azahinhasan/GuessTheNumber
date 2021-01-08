@@ -52,14 +52,14 @@ h1:hover{
 	left: 50px;
 }
 #yourNumber {
-    width: 10%;
-    height: 70px;
+    width: 20%;
+    height: 100px;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid white;
     border-radius: 4px;
     background-color: #d6d5d5;
-	font-size: 28px;
+	font-size: 24px;
 	resize: none;
 	text-align: center;
 	text-transform: initial;
@@ -74,14 +74,17 @@ h1:hover{
 }
 
 #unknownNumber{
-	font-size: 30px;
+	font-size: 80px;
+	display: block;
+	text-align: center;
+	left: 45%;
+	position: relative;
 	background-color: #d6d5d5;
 	color: black;
 	border: 3px solid white;
-	width: 30px;
-	height: 60px;
+	width: 150px;
+	height: 150px;
 	padding: 12px 20px;
-	box-sizing: border-box;
 	border-radius: 4px;
   }
 
