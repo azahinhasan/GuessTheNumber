@@ -74,11 +74,11 @@ function myFunction2() {  //next
    var yourNumber = document.getElementById("yourNumber").value;
    if(yourNumber == randomNumber){
      
-      document.getElementById("result").innerHTML = "Right";
+      document.getElementById("result").innerHTML = "!^.^!Right!^.^!";
       points=points+5;
       
    }else{
-      document.getElementById("result").innerHTML = "Wrong";
+      document.getElementById("result").innerHTML = "!T.T!Wrong!T.T!";
       
       life--;
    }

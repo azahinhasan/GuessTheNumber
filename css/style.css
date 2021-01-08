@@ -53,17 +53,25 @@ h1:hover{
 }
 #yourNumber {
     width: 10%;
-    height: 60px;
+    height: 70px;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid white;
     border-radius: 4px;
     background-color: #d6d5d5;
-	font-size: 25px;
+	font-size: 28px;
 	resize: none;
 	text-align: center;
+	text-transform: initial;
 
   }
+
+#result{
+	font-size: 30px;
+	position: relative;
+	top: -20px;
+	color: lightcoral;
+}
 
 #unknownNumber{
 	font-size: 30px;
