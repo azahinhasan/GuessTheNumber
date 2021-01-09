@@ -11,12 +11,21 @@ var life = 2;
 var counterReset=0;
 var hintsMin = hintsMax = 0;
 var valueForLastPage = 0;
+var onloadDecision = 0;
+
 window.onload = function() {
-   guessNumber=Math.floor(Math.random() * 2);
-   randomNumber=Math.floor(Math.random() * 50);
-   myFunction2();
-   document.getElementById("buttonNext").disabled = true;
-   lifePoints();
+   if(onloadDecision == 0){
+      guessNumber=Math.floor(Math.random() * 2);
+      randomNumber=Math.floor(Math.random() * 50);
+      myFunction2();
+      document.getElementById("buttonNext").disabled = true;
+      lifePoints();
+   }else if(onloadDecision == 1){
+      onloadDecision = 0;
+      a(1);
+
+   }
+
 
  };
 
@@ -133,13 +142,17 @@ function finalPageActon(value){
       document.getElementById("finalMssage").innerHTML = "You Won!!!!!";
       document.getElementById("finalMssage2").innerHTML = "Congratulation!";
    }else if(value == 2){
-      window.location.href = "finalPage.html";
-      document.getElementById("finalMssage").innerHTML = "You Lose!!!!!";
-      document.getElementById("finalMssage2").innerHTML = "Game Over!";  
+      onloadDecision = 1;
+     // window.location.href = "finalPage.html";
+      //window.open("finalPage.html","mypopup","width=500,height=300") //pop up window
+     
+      // popup.document.getElementById("player").someFunction();
+      //document.getElementById("finalMssage").innerHTML = "You Lose!!!!!";
+      //document.getElementById("finalMssage2").innerHTML = "Game Over!";  
       //window.location.href = "http://www.w3schools.com";   
    }
    
-   function a(){
+   function a(valueForLastPage){
       if(valueForLastPage == 1){
          document.getElementById("finalMssage").innerHTML = "You Won!!!!!";
          document.getElementById("finalMssage2").innerHTML = "Congratulation!";
