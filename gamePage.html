@@ -9,6 +9,7 @@
 
 
 <body >
+<div id="1stPart">
 <h1><u>Guess The Number</u></h1>
 <div id = "inputOutput">
     <span id="result"></span>
@@ -29,19 +30,58 @@
     <button  onclick="myFunction()" id="buttonClick" class="button"><span>Click</span></button>
     <br>
     <button  onclick="myFunction2()" id="buttonNext" class="button"><span>Next</span></button>
-
 </div>
 
 <br>
 
 <div id="pointsLive">
-    <span id="point"></span> <span>: Point</span> 
-    <br>
-    <span id="life"></span>  <span>: Life</span> 
+    <table>
+        <tr>
+            <td>
+                <span id="matchPlayed"></span>
+            </td>
+            <td>
+                <span>: Match Played</span> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span id="point"></span>
+            </td>
+            <td>
+                <span>: Point</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span id="life"></span>
+            </td>
+            <td>
+                <span>: Life</span> 
+            </td>
+        </tr>
+    </table>
+     
+     
 </div>
 
+</div>
 
-
+<div id="2ndPart">
+    <h1><u>Guess The Number</u></h1>
+    <div id = "finalMassage">
+        
+        <div id="finalMssage">?</div>
+        <div id="finalMssage2">?</div>
+        <br>
+        <span id="point"></span> <span>: Point</span> 
+        <br>
+        <span id="life"></span>  <span>: Life</span> 
+        <br>
+        <a href="gamePage.html"><button id="buttonNext" class="button"><span>Play Again?</span></button></a>
+    
+    </div>
+</div>
 
 <!--<div id ="note"><span id ="ps">[Contacts Me]</span><br><br>
 

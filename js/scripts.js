@@ -8,16 +8,19 @@ var arr2 = [0,2,1,9,4];
 var arr3 = [0,4,4,1,3];
 var points=0;
 var life = 2;
+var matchPlayed = 0;
 var counterReset=0;
 var hintsMin = hintsMax = 0;
 var valueForLastPage = 0;
 var onloadDecision = 0;
+document.getElementById("2ndPart").style.visibility  = "hidden";
 
 window.onload = function() {
    guessNumber=Math.floor(Math.random() * 2);
    randomNumber=Math.floor(Math.random() * 50);
    myFunction2();
    document.getElementById("buttonNext").disabled = true;
+   document.getElementById("matchPlayed").innerHTML = '00';
    lifePoints();
 
  };
@@ -70,7 +73,10 @@ function myFunction2() {  //next
  }
 
 
- function myFunction() {
+ function myFunction() { //click
+   matchPlayed++;
+   document.getElementById("matchPlayed").innerHTML = ('0' + matchPlayed).slice(-2);
+
    document.getElementById("buttonNext").disabled = false;
    document.getElementById("buttonClick").disabled = true;
    var yourNumber = document.getElementById("yourNumber").value;
@@ -129,18 +135,27 @@ function hintsButtonShow(){
 }
 
 function finalPageActon(value){
-   
+
+   document.getElementById("1stPart").style.display  = "none";
+   document.getElementById("hintsButton").style.display  = "none";
+   document.getElementById("2ndPart").style.visibility = "visible";
+
    document.getElementById("life").innerHTML = value;
    if(value == 1){
-      window.location.href = "finalPageWin.html";
+      document.getElementById("finalMssage").innerHTML = "You Won!!!!!";
+      document.getElementById("finalMssage2").innerHTML = "Congratulation!";
 
    }else if(value == 2){
       //onloadDecision = 1;
-      window.location.href = "finalPageLost.html";
+      //window.location.href = "finalPageLost.html";
+     
+      
+      
+      
       //window.open("finalPage.html","mypopup","width=500,height=300") //pop up window
       // popup.document.getElementById("player").someFunction();
-      //document.getElementById("finalMssage").innerHTML = "You Lose!!!!!";
-      //document.getElementById("finalMssage2").innerHTML = "Game Over!";  
+      document.getElementById("finalMssage").innerHTML = "You Lose!!!!!";
+      document.getElementById("finalMssage2").innerHTML = "Game Over!";  
       //window.location.href = "http://www.w3schools.com";   
       //PopupCenter('finalPage.html','xtf','900','500');  
       //window.open('https://javascript.info');
@@ -159,24 +174,4 @@ function finalPageActon(value){
    }*/
 }
 
-
-
-
-
-function PopupCenter(url, title, w, h) {  
-   // Fixes dual-screen position                         Most browsers      Firefox  
-   var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;  
-   var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;  
-             
-   width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;  
-   height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;  
-             
-   var left = ((width / 2) - (w / 2)) + dualScreenLeft;  
-   var top = ((height / 2) - (h / 2)) + dualScreenTop;  
-   var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);  
  
-   // Puts focus on the newWindow  
-   if (window.focus) {  
-       newWindow.focus();  
-   }  
-}  
