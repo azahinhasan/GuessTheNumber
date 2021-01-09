@@ -7,7 +7,7 @@ var arr1 = [0,5,8,10,2];
 var arr2 = [0,2,1,9,4];
 var arr3 = [0,4,4,1,3];
 var points=0;
-var life = 08;
+var life = 2;
 var counterReset=0;
 var hintsMin = hintsMax = 0;
 
@@ -31,7 +31,7 @@ function hints1(){
    //document.getElementById("hints").innerHTML =randomNumber;
    hintsMin = randomNumberMinMax(randomNumber-2,randomNumber);
    hintsMax = randomNumberMinMax(randomNumber+1,randomNumber+3);
-   hints = "[Hints:Number is bettween "+hintsMin+" and "+hintsMax+"]";
+   hints = "[ Hints:Number is bettween "+hintsMin+" and "+hintsMax+" ]";
 }
 function myFunction2() {  //next
    
@@ -82,6 +82,12 @@ function myFunction2() {  //next
       
       life--;
    }
+
+   if(points >= 50){
+      finalPageActon(1);
+   }else if(life < 0){
+      finalPageActon(2);
+   }
    document.getElementById("unknownNumber").innerHTML = randomNumber;
    lifePoints();
  }
@@ -117,5 +123,21 @@ function hintsButtonShow(){
    //document.getElementById("hintsButton").style.display = "block text-align: center;";
    document.getElementById("hintsButton").style.visibility = "visible";
    document.getElementById("hints").innerHTML = "";
+}
+
+function finalPageActon(value){
+   
+   document.getElementById("life").innerHTML = value;
+   if(value == 1){
+      document.getElementById("finalMssage").innerHTML = "You Won!!!!!";
+      document.getElementById("finalMssage2").innerHTML = "Congratulation!";
+   }else if(value == 2){
+      document.getElementById("finalMssage").innerHTML = "You Lose!!!!!";
+      document.getElementById("finalMssage2").innerHTML = "Game Over!";
+      window.location.href = "finalPage.html";
+      //window.location.href = "http://www.w3schools.com";
+      
+   }
+
 }
 
