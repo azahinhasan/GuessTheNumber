@@ -14,18 +14,11 @@ var valueForLastPage = 0;
 var onloadDecision = 0;
 
 window.onload = function() {
-   if(onloadDecision == 0){
-      guessNumber=Math.floor(Math.random() * 2);
-      randomNumber=Math.floor(Math.random() * 50);
-      myFunction2();
-      document.getElementById("buttonNext").disabled = true;
-      lifePoints();
-   }else if(onloadDecision == 1){
-      onloadDecision = 0;
-      a(1);
-
-   }
-
+   guessNumber=Math.floor(Math.random() * 2);
+   randomNumber=Math.floor(Math.random() * 50);
+   myFunction2();
+   document.getElementById("buttonNext").disabled = true;
+   lifePoints();
 
  };
 
@@ -139,20 +132,22 @@ function finalPageActon(value){
    
    document.getElementById("life").innerHTML = value;
    if(value == 1){
-      document.getElementById("finalMssage").innerHTML = "You Won!!!!!";
-      document.getElementById("finalMssage2").innerHTML = "Congratulation!";
+      window.location.href = "finalPageWin.html";
+
    }else if(value == 2){
-      onloadDecision = 1;
-     // window.location.href = "finalPage.html";
+      //onloadDecision = 1;
+      window.location.href = "finalPageLost.html";
       //window.open("finalPage.html","mypopup","width=500,height=300") //pop up window
-     
       // popup.document.getElementById("player").someFunction();
       //document.getElementById("finalMssage").innerHTML = "You Lose!!!!!";
       //document.getElementById("finalMssage2").innerHTML = "Game Over!";  
       //window.location.href = "http://www.w3schools.com";   
+      //PopupCenter('finalPage.html','xtf','900','500');  
+      //window.open('https://javascript.info');
+      //document.getElementById("finalMssage").innerHTML = "You Lose!!!!!";
    }
    
-   function a(valueForLastPage){
+   /*function a(valueForLastPage){
       if(valueForLastPage == 1){
          document.getElementById("finalMssage").innerHTML = "You Won!!!!!";
          document.getElementById("finalMssage2").innerHTML = "Congratulation!";
@@ -161,6 +156,27 @@ function finalPageActon(value){
          document.getElementById("finalMssage2").innerHTML = "Game Over!";  
          //window.location.href = "http://www.w3schools.com";   
       }
-   }
+   }*/
 }
 
+
+
+
+
+function PopupCenter(url, title, w, h) {  
+   // Fixes dual-screen position                         Most browsers      Firefox  
+   var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;  
+   var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;  
+             
+   width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;  
+   height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;  
+             
+   var left = ((width / 2) - (w / 2)) + dualScreenLeft;  
+   var top = ((height / 2) - (h / 2)) + dualScreenTop;  
+   var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);  
+ 
+   // Puts focus on the newWindow  
+   if (window.focus) {  
+       newWindow.focus();  
+   }  
+}  
