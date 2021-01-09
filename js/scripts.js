@@ -7,7 +7,7 @@ var arr1 = [0,5,8,10,2];
 var arr2 = [0,2,1,9,4];
 var arr3 = [0,4,4,1,3];
 var points=0;
-var life = 2;
+var life = 5;
 var matchPlayed = 0;
 var counterReset=0;
 var hintsMin = hintsMax = 0;
@@ -66,7 +66,7 @@ function myFunction2() {  //next
             i = 0;
          }
    }
-   hints1()
+   hints1();
    ///////////////////////////////
    //document.getElementById("point").innerHTML = randomNumber;
    
@@ -91,7 +91,7 @@ function myFunction2() {  //next
       life--;
    }
 
-   if(points >= 50){
+   if(points >= 30){
       finalPageActon(1);
    }else if(life < 0){
       finalPageActon(2);
@@ -144,6 +144,8 @@ function finalPageActon(value){
    if(value == 1){
       document.getElementById("finalMssage").innerHTML = "You Won!!!!!";
       document.getElementById("finalMssage2").innerHTML = "Congratulation!";
+      document.getElementById("emoji").innerHTML = "🎖";
+      
 
    }else if(value == 2){
       //onloadDecision = 1;
@@ -156,6 +158,7 @@ function finalPageActon(value){
       // popup.document.getElementById("player").someFunction();
       document.getElementById("finalMssage").innerHTML = "You Lose!!!!!";
       document.getElementById("finalMssage2").innerHTML = "Game Over!";  
+      document.getElementById("emoji").innerHTML = "😂";
       //window.location.href = "http://www.w3schools.com";   
       //PopupCenter('finalPage.html','xtf','900','500');  
       //window.open('https://javascript.info');
