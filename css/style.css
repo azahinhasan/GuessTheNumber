@@ -85,18 +85,21 @@ h1:hover{
 }
 
 #unknownNumber{
-	font-size: 85px;
-	display: block;
+	font-size: 95px;
 	text-align: center;
 	left: 0%;
 	position: relative;
 	background-color: #d6d5d5;
 	color: black;
 	border: 3px solid white;
-	width: 100%;
-	height: 120px;
+	width: 13%;
+	height: 130px;
 	padding: 12px 20px;
 	border-radius: 4px;
+	display: block;
+    margin-left: auto;
+	margin-right: auto 
+	
   }
 
   #inputOutput{
