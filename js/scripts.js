@@ -16,12 +16,19 @@ var onloadDecision = 0;
 document.getElementById("2ndPart").style.visibility  = "hidden";
 
 window.onload = function() {
-   guessNumber=Math.floor(Math.random() * 2);
-   randomNumber=Math.floor(Math.random() * 50);
-   myFunction2();
-   document.getElementById("buttonNext").disabled = true;
-   document.getElementById("matchPlayed").innerHTML = '00';
-   lifePoints();
+   const storeValue = localStorage.getItem('storeValue');
+   if(storeValue == 1){
+      guessNumber=Math.floor(Math.random() * 2);
+      randomNumber=Math.floor(Math.random() * 50);
+      myFunction2();
+      document.getElementById("buttonNext").disabled = true;
+      document.getElementById("matchPlayed").innerHTML = '00';
+      lifePoints();
+      window.localStorage.removeItem('storeValue');
+   }else{
+      window.location.href = "index.html";
+   }
+
 
  };
 
