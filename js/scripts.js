@@ -143,6 +143,7 @@ function hintsButtonShow(){
 
 function finalPageActon(value){
 
+   localStorage.setItem("storeValue",1);
    document.getElementById("1stPart").style.display  = "none";
    document.getElementById("hintsButton").style.display  = "none";
    document.getElementById("2ndPart").style.visibility = "visible";
